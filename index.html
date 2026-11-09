@@ -2,7 +2,7 @@
 <html lang='ms'>
 <head>
 <meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
 <meta name='theme-color' content='#1F2A44'>
 <meta name='description' content='Laporan aduan dan maklum balas pelajar mengenai perkhidmatan Dobi Sutera oleh MPP UiTM Cawangan Terengganu Sesi 2025/2026.'>
 <title>Aduan dan Maklum Balas Perkhidmatan Dobi Sutera — MPP UiTM Cawangan Terengganu</title>
@@ -206,6 +206,14 @@ body{padding:0}
 .mp #kebocoran{border:2px solid #C9A24B !important;background:#FBF6E8 !important;color:#1B2235 !important}
 .mp #kebocoran h3,.mp #kebocoran p,.mp #kebocoran .muted,.mp #kebocoran .big,.mp #kebocoran .big small{color:#1B2235 !important}
 .mp #kebocoran .badge{background:#C9A24B !important;color:#1B2235 !important;font-weight:800 !important}
+.mp{padding-bottom:calc(76px + env(safe-area-inset-bottom, 0px)) !important}
+.mp .botnav{position:fixed;left:0;right:0;bottom:0;z-index:90;display:grid;grid-template-columns:repeat(4,1fr);background:#FFFFFF;border-top:1px solid #E2E5EC;box-shadow:0 -4px 16px rgba(15,21,37,.08);padding:0 0 env(safe-area-inset-bottom, 0px)}
+.mp .botnav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;min-height:60px;padding:.4rem .15rem;color:#1F2A44;text-decoration:none;font-size:.72rem;font-weight:600;line-height:1.1;text-align:center;touch-action:manipulation;-webkit-tap-highlight-color:transparent;position:relative;min-width:0}
+.mp .botnav a span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.mp .botnav a[aria-current]{color:#7A2E8E}
+.mp .botnav a[aria-current]::before{content:'';position:absolute;top:0;left:22%;right:22%;height:3px;border-radius:0 0 3px 3px;background:#7A2E8E}
+.mp .botnav a:focus-visible{outline:3px solid #C9A24B;outline-offset:-3px}
+@media (min-width:821px){.mp .botnav{left:50%;right:auto;width:min(1180px,100%);transform:translateX(-50%)}}
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -215,14 +223,7 @@ body{padding:0}
 <body>
 <div class='mp' lang='ms'>
   <div class='sticky-head' id='kepala'>
-    <div class='topbar'>
-      <div class='idbox'>
-        <span class='idtext'><b>MPP Sesi 25/26</b><span>UiTM Cawangan Terengganu Kampus Kuala Terengganu</span></span>
-      </div>
-      <button type='button' class='kebab' aria-label='Buka menu' aria-haspopup='menu' aria-expanded='false' aria-controls='menu-utama'><svg viewBox='0 0 24 24' width='24' height='24' fill='currentColor' aria-hidden='true'><circle cx='12' cy='5' r='2.2'/><circle cx='12' cy='12' r='2.2'/><circle cx='12' cy='19' r='2.2'/></svg></button>
-    </div>
     <div class='banner' data-draw='banner' data-source='media_slaid' data-m='banner' role='img' aria-label='Banner Majlis Perwakilan Pelajar UiTM Cawangan Terengganu Sesi 2025/2026'></div>
-    <nav class='menu' id='menu-utama' role='menu' aria-label='Menu utama' hidden><a role='menuitem' href='#tajuk' data-go='tajuk'><svg viewBox='0 0 24 24' width='20' height='20' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z'/></svg><span>Laman Utama</span></a><a role='menuitem' href='#ringkasan' data-go='ringkasan'><svg viewBox='0 0 24 24' width='20' height='20' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M4 20V10M10 20V4M16 20v-7M22 20H2'/></svg><span>Statistik</span></a><a role='menuitem' href='#galeri' data-go='galeri'><svg viewBox='0 0 24 24' width='20' height='20' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='3' y='5' width='18' height='14' rx='2'/><circle cx='9' cy='10' r='2'/><path d='M21 16l-5-5-8 8'/></svg><span>Gambar</span></a><a role='menuitem' href='#hubungi' data-go='hubungi'><svg viewBox='0 0 24 24' width='20' height='20' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.9 2z'/></svg><span>Hubungi Kami</span></a></nav>
   </div>
   <header class='masthead' id='tajuk'>
     <div class='head-body'>
@@ -424,6 +425,12 @@ body{padding:0}
     </div>
   </footer>
   </div>
+  <nav class='botnav' aria-label='Navigasi utama'>
+    <a href='#tajuk' data-go='tajuk' data-nav='tajuk'><svg viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z'/></svg><span>Laman Utama</span></a>
+    <a href='#ringkasan' data-go='ringkasan' data-nav='ringkasan'><svg viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M4 20V10M10 20V4M16 20v-7M22 20H2'/></svg><span>Statistik</span></a>
+    <a href='#bukti' data-go='bukti' data-nav='bukti'><svg viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='3' y='5' width='18' height='14' rx='2'/><circle cx='9' cy='10' r='2'/><path d='M21 16l-5-5-8 8'/></svg><span>Gambar</span></a>
+    <a href='#hubungi' data-go='hubungi' data-nav='hubungi'><svg viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.9 2z'/></svg><span>Hubungi Kami</span></a>
+  </nav>
 </div>
 
 
@@ -728,6 +735,19 @@ body{padding:0}
     const id = (location.hash || '').slice(1);
     if (id && document.getElementById(id) && document.querySelector('#carta-isu svg')) { linked = true; goTo(id); }
   });
+  document.querySelectorAll('.mp .botnav a[data-go]').forEach((a) => a.addEventListener('click', (ev) => { ev.preventDefault(); goTo(a.dataset.go); }));
+  const spy = () => {
+    const head = document.querySelector('.mp .sticky-head'); const line = (head ? head.getBoundingClientRect().bottom : 0) + 40;
+    const top = (id) => { const el = document.getElementById(id); return el ? el.getBoundingClientRect().top : Infinity; };
+    const atEnd = Math.ceil((window.scrollY || 0) + window.innerHeight) >= document.documentElement.scrollHeight - 4;
+    let cur = 'tajuk';
+    if (top('ringkasan') <= line) cur = 'ringkasan';
+    if (top('bukti') <= line) cur = 'bukti';
+    if (top('cadangan-tindakan') <= line) cur = '';
+    if (atEnd || top('hubungi') <= window.innerHeight * 0.6) cur = 'hubungi';
+    document.querySelectorAll('.mp .botnav a').forEach((a) => { if (a.dataset.nav === cur) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); });
+  };
+  window.addEventListener('scroll', spy, {passive: true}); window.addEventListener('resize', spy); dash.onData(spy);
   document.querySelectorAll('.mp .seg button').forEach((b) => {
     b.addEventListener('click', () => dash.setParams({kumpulan: b.dataset.k}));
   });
