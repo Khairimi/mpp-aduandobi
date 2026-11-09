@@ -214,6 +214,9 @@ body{padding:0}
 .mp .botnav a[aria-current]::before{content:'';position:absolute;top:0;left:22%;right:22%;height:3px;border-radius:0 0 3px 3px;background:#7A2E8E}
 .mp .botnav a:focus-visible{outline:3px solid #C9A24B;outline-offset:-3px}
 @media (min-width:821px){.mp .botnav{left:50%;right:auto;width:min(1180px,100%);transform:translateX(-50%)}}
+.mp .sticky-head{position:relative !important;top:auto;box-shadow:none !important;background:transparent !important}
+.mp .sticky-head .banner,.mp .banner{width:100%;max-width:960px !important;margin:0 auto !important}
+.mp .banner img{width:100% !important;height:auto !important}
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -713,7 +716,7 @@ body{padding:0}
   const goTo = (id) => {
     const t = document.getElementById(id); if (!t) return;
     if (id === 'tajuk') { window.scrollTo({top: 0, behavior: 'smooth'}); try { dash.setLink(id); } catch (e) {} return; }
-    const bar = document.querySelector('.mp .sticky-head'); const off = bar ? bar.getBoundingClientRect().height + 12 : 0;
+    const bar = document.querySelector('.mp .sticky-head'); const stuck = bar && getComputedStyle(bar).position === 'sticky'; const off = (stuck ? bar.getBoundingClientRect().height : 0) + 12;
     const y = t.getBoundingClientRect().top + (window.scrollY || 0) - off;
     window.scrollTo({top: Math.max(0, y), behavior: 'smooth'});
     try { dash.setLink(id); } catch (e) {}
@@ -737,7 +740,7 @@ body{padding:0}
   });
   document.querySelectorAll('.mp .botnav a[data-go]').forEach((a) => a.addEventListener('click', (ev) => { ev.preventDefault(); goTo(a.dataset.go); }));
   const spy = () => {
-    const head = document.querySelector('.mp .sticky-head'); const line = (head ? head.getBoundingClientRect().bottom : 0) + 40;
+    const head = document.querySelector('.mp .sticky-head'); const line = (head && getComputedStyle(head).position === 'sticky' ? head.getBoundingClientRect().bottom : 0) + 40;
     const top = (id) => { const el = document.getElementById(id); return el ? el.getBoundingClientRect().top : Infinity; };
     const atEnd = Math.ceil((window.scrollY || 0) + window.innerHeight) >= document.documentElement.scrollHeight - 4;
     let cur = 'tajuk';
